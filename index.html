@@ -34,11 +34,10 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
   <body>
     <div class="reveal">
       <div class="slides">
-        <section data-markdown>
-          # Getting Started with Action Cable
-          ### Welcome to Rails 5
-
-          [@HayleyCAnderson](https://twitter.com/HayleyCAnderson)
+        <section>
+          <h1>Getting Started with Action Cable</h1>
+          <h3>Welcome to Rails 5</h3>
+          <a href="https://twitter.com/HayleyCAnderson">@HayleyCAnderson</a>
         </section>
 
         <section>
@@ -49,10 +48,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
         </section>
 
         <section>
-          <h3>HTTP = Hypertext Transfer Protocol</h3>
-
+          <h2>HTTP = Hypertext Transfer Protocol</h2>
           <img width="50%" data-src="https://upload.wikimedia.org/wikipedia/commons/7/75/Internet1.jpg">
-
           <ul>
             <li class="fragment">GET, POST, DELETE, etc. are HTTP methods sent by clients</li>
             <li class="fragment">A client sends a request, and the server sends a response</li>
@@ -60,15 +57,52 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
         </section>
 
         <section>
-          <h3>WebSockets</h3>
-
-          <h4>The way of the future <span class="fragment">???</span></h4>
-
+          <h2>WebSockets</h2>
+          <h3>The way of the future <span class="fragment">???</span></h3>
           <ul>
             <li class="fragment">Allows a bidirectional connection between client and server</li>
             <li class="fragment">Both client and server can send and receive data in real time</li>
             <li class="fragment">Created by HTTP connection being upgraded, then held open</li>
           </ul>
+        </section>
+
+        <section>
+          <h2>Why does it matter?</h2>
+          <ul>
+            <li class="fragment">HTTP is universally compatible and easier to scale and secure</li>
+            <li class="fragment">But some use cases require live updates from the server</li>
+            <li class="fragment">A client using HTTP cannot know about changes on the server</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>How to Deal with This</h2>
+          <h3>The Options</h3>
+          <ul>
+            <li>
+              Short Polling
+              <span class="fragment"> - Client periodically sends repeated requests to the server</span>
+            </li>
+            <li>
+              Long Polling
+              <span class="fragment"> - Server holds open HTTP connections until new data is sent</span>
+            </li>
+            <li>
+              HTTP Streaming
+              <span class="fragment"> - Server holds open HTTP connection and sends data over one connection</span>
+            </li>
+            <li>
+              Server Sent Events
+              <span class="fragment"> - Client opens HTTP connection that can accept push notifications</span>
+            </li>
+          </ul>
+          <h3 class="fragment">... or WebSockets!</h3>
+        </section>
+
+        <section>
+          <h2>Rails + WebSockets</h2>
+          <h3>The Options</h3>
+          <h4>( Until Rails 5 = &#x1F494; )</h4>
         </section>
       </div>
     </div>
