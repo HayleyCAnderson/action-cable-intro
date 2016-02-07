@@ -48,7 +48,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
         </section>
 
         <section>
-          <h2>HTTP = Hypertext Transfer Protocol</h2>
+          <h3>HTTP = Hypertext Transfer Protocol</h3>
           <img width="50%" data-src="https://upload.wikimedia.org/wikipedia/commons/7/75/Internet1.jpg">
           <ul>
             <li class="fragment">GET, POST, DELETE, etc. are HTTP methods sent by clients</li>
@@ -79,30 +79,34 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
           <h2>How to Deal with This</h2>
           <h3>The Options</h3>
           <ul>
-            <li>
-              Short Polling
-              <span class="fragment"> - Client periodically sends repeated requests to the server</span>
-            </li>
-            <li>
-              Long Polling
-              <span class="fragment"> - Server holds open HTTP connections until new data is sent</span>
-            </li>
-            <li>
-              HTTP Streaming
-              <span class="fragment"> - Server holds open HTTP connection and sends data over one connection</span>
-            </li>
-            <li>
-              Server Sent Events
-              <span class="fragment"> - Client opens HTTP connection that can accept push notifications</span>
-            </li>
+            <li>Short Polling <span class="fragment"> - Client periodically sends repeated requests to the server</span></li>
+            <li>Long Polling <span class="fragment"> - Server holds open HTTP connections until new data is sent</span></li>
+            <li>HTTP Streaming <span class="fragment"> - Server holds open HTTP connection and sends data over one connection</span></li>
+            <li>Server Sent Events <span class="fragment"> - Client opens HTTP connection that can accept push notifications</span></li>
           </ul>
           <h3 class="fragment">... or WebSockets!</h3>
         </section>
 
         <section>
-          <h2>Rails + WebSockets</h2>
+          <h2>Rails + Streaming</h2>
           <h3>The Options</h3>
-          <h4>( Until Rails 5 = &#x1F494; )</h4>
+          <h4 class="fragment">( Until Rails 5 = &#x1F494; )</h4>
+          <ul>
+            <li class="fragment">ActionController::Streaming</li>
+            <li class="fragment">ActionController::Live + Server Sent Events</li>
+            <li class="fragment">Pusher, Faye, Node</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>But now, Action Cable</h2>
+          <h4>A fullstack WebSockets implementation built directly into Rails</h4>
+          <ul>
+            <li class="fragment">Create channels with classic Rails namespacing</li>
+            <li class="fragment">Broadcast data from anywhere within application</li>
+            <li class="fragment">Subscribe views to channels to pick up broadcasted data</li>
+            <li class="fragment">Retain flexibility but let Rails worry about connections</li>
+          </ul>
         </section>
       </div>
     </div>
