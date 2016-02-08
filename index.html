@@ -35,16 +35,14 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1>Getting Started with Action Cable</h1>
-          <h3>Welcome to Rails 5</h3>
+          <h1>Action Cable</h1>
+          <h3>So I heard you want to make your Rails application realtime...</h3>
           <a href="https://twitter.com/HayleyCAnderson">@HayleyCAnderson</a>
         </section>
 
         <section>
-          <h2>Some Background</h2>
-          <h4>HTTP vs. WebSockets</h4>
-          <i class="material-icons">arrow_downward</i>
-          <h4>Why and How</h4>
+          <h2>First, Some Background</h2>
+          <h4>HTTP vs. WebSockets vs. Everything Else</h4>
         </section>
 
         <section>
@@ -58,7 +56,6 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
         <section>
           <h2>WebSockets</h2>
-          <h3>The way of the future <span class="fragment">???</span></h3>
           <ul>
             <li class="fragment">Allows a bidirectional connection between client and server</li>
             <li class="fragment">Both client and server can send and receive data in real time</li>
@@ -67,34 +64,23 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
         </section>
 
         <section>
-          <h2>Why does it matter?</h2>
+          <h2>Everything Else</h2>
           <ul>
-            <li class="fragment">HTTP is universally compatible and easier to scale and secure</li>
-            <li class="fragment">But some use cases require live updates from the server</li>
-            <li class="fragment">A client using HTTP cannot know about changes on the server</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>How to Deal with This</h2>
-          <h3>The Options</h3>
-          <ul>
-            <li>Short Polling <span class="fragment"> - Client periodically sends repeated requests to the server</span></li>
+            <li>Short Polling <span class="fragment"> - Client periodically sends repeated HTTP requests to the server</span></li>
             <li>Long Polling <span class="fragment"> - Server holds open HTTP connections until new data is sent</span></li>
             <li>HTTP Streaming <span class="fragment"> - Server holds open HTTP connection and sends data over one connection</span></li>
             <li>Server Sent Events <span class="fragment"> - Client opens HTTP connection that can accept push notifications</span></li>
           </ul>
-          <h3 class="fragment">... or WebSockets!</h3>
         </section>
 
         <section>
-          <h2>Rails + Streaming</h2>
+          <h2>Rails + Realtime</h2>
           <h3>The Options</h3>
           <h4 class="fragment">( Until Rails 5 = &#x1F494; )</h4>
           <ul>
-            <li class="fragment">ActionController::Streaming</li>
+            <li class="fragment">ActionController::Streaming <span class="fragment">(sorry, wrong type of streaming)</span></li>
             <li class="fragment">ActionController::Live + Server Sent Events</li>
-            <li class="fragment">Pusher, Faye, Node</li>
+            <li class="fragment">Pusher, Faye, Node, etc.</li>
           </ul>
         </section>
 
