@@ -19,7 +19,7 @@
     <!-- Code syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet">
 
     <!-- Printing and PDF exports -->
     <script>
@@ -37,6 +37,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
         <section>
           <h1>Action Cable</h1>
           <h3>So I heard you want to make your Rails application realtime...</h3>
+          <span class="socicon socicon-twitter"></span> + <span class="socicon socicon-github"></span>
           <a href="https://twitter.com/HayleyCAnderson">@HayleyCAnderson</a>
         </section>
 
@@ -75,7 +76,6 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
         <section>
           <h2>Rails + Realtime</h2>
-          <h3>The Options</h3>
           <h4 class="fragment">( Until Rails 5 = &#x1F494; )</h4>
           <ul>
             <li class="fragment">ActionController::Streaming <span class="fragment">(sorry, wrong type of streaming)</span></li>
@@ -92,6 +92,61 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
             <li class="fragment">Broadcast data from anywhere within application</li>
             <li class="fragment">Subscribe views to channels to pick up broadcasted data</li>
             <li class="fragment">Retain flexibility but let Rails worry about connections</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Let's see it in action!</h2>
+          <h4>( <a href="https://github.com/HayleyCAnderson/action-cable-demo">Demo</a> )</h4>
+        </section>
+
+        <section>
+          <h2>So what's really behind the magic?</h2>
+          <h4>( The short version )</h4>
+        </section>
+
+        <section>
+          <h2>The Server</h2>
+          <ul>
+            <li class="fragment">Run separately or mounted as an engine</li>
+            <li class="fragment">Establishes pubsub connection (Redis or PostgreSQL)</li>
+            <li class="fragment">Creates an event loop that listens in the background</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>The Connection</h2>
+          <ul>
+            <li class="fragment">Client-side consumer creation initiates connection</li>
+            <li class="fragment">Consumer make a GET request to server and requests upgrade</li>
+            <li class="fragment">Server can authorize, identify, and/or accept connection</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>The Channel</h2>
+          <ul>
+            <li class="fragment">Channels are exposed to and called by the client</li>
+            <li class="fragment">Allows consumer subscription to actual pubsub channel</li>
+            <li class="fragment">Represents a stateless stream of data accessible to consumer</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>The End!</h3>
+          <span class="socicon socicon-twitter"></span> + <span class="socicon socicon-github"></span>
+          <a href="https://twitter.com/HayleyCAnderson">@HayleyCAnderson</a>
+          <br/>
+          <br/>
+
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="https://github.com/HayleyCAnderson/action-cable-demo">Action Cable Demo</a></li>
+            <li><a href="https://github.com/rails/rails/tree/master/actioncable">Action Cable README</a></li>
+            <li><a href="https://github.com/rails/actioncable-examples">Action Cable Examples</a></li>
+            <li><a href="https://www.nateberkopec.com/2015/09/30/action-cable.html">Action Cable - Friend or Foe? by Nate Berkopec</a></li>
+            <li><a href="http://www.thegreatcodeadventure.com/rails-5-preview-action-cable/">Rails 5 Preview: Action Cable Part I by Sophie DeBenedetto</a></li>
+            <li><a href="http://blog.bigbinary.com/2015/07/19/using-reactjs-with-rails-actioncable.html">Using ReactJS with Rails Action Cable by Vipul</a></li>
           </ul>
         </section>
       </div>
